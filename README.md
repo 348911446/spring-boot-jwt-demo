@@ -23,3 +23,6 @@ Get-ChildItem $Out | Where-Object {-not $_.PSIsContainer} | ForEach-Object {
   $hash = Get-FileHash -Path $_.FullName -Algorithm SHA256
   \"$($_.Name) $($hash.Hash)\" | Out-File -FilePath (Join-Path $Out 'SHA256SUMS.txt') -Append -Encoding utf8
 }
+
+
+Get-FileHash -Algorithm SHA256 '.\dependencies\downloads\PyDev 9.3.0.zip' | Format-List
