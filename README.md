@@ -69,3 +69,6 @@ Caused by: java.lang.UnsatisfiedLinkError: C:\Users\liuy\.gradle\native\0.2.8\x8
         at java.base/java.lang.System.load(System.java:2025)
         at org.gradle.fileevents.FileEvents.init(FileEvents.java:55)
         ... 11 more
+
+
+.\gradlew.bat -Dorg.gradle.native=false -I gradle/support/fetchDependencies.gradle init
